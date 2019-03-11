@@ -175,3 +175,10 @@ CREATE TABLE staff (
     jod_title VARCHAR(50),
     PRIMARY KEY (staff_id)
 );
+
+-- ------------------------ --
+-- Alter a field of a Table --
+-- ------------------------ --
+ALTER TABLE recipient
+    ADD bag_id INT(8) NOT NULL,
+    ADD FOREIGN KEY (bag_id) REFERENCES bag(bag_id);
